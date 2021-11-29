@@ -11,7 +11,7 @@ import SwiftUI
 struct IOS_Module5WrapUpApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView(model: SearchViewModel())
         }
     }
 }

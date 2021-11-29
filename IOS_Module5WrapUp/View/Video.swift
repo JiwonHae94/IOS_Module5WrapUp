@@ -8,11 +8,11 @@
 import SwiftUI
 import AVKit
 
-struct VideoView: View {
-    @EnvironmentObject var viewmodel : LessonViewModel
+struct Video: View {
+    @EnvironmentObject var model : SearchViewModel
     
     var body: some View {
-        let lesson = viewmodel.currentLesson
+        let lesson = model.currentLesson
         let videoURL = URL(fileURLWithPath: lesson?.videoURL ?? "")
         
         if videoURL != nil{
@@ -24,6 +24,6 @@ struct VideoView: View {
 
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoView()
+        Video()
     }
 }
